@@ -17,7 +17,7 @@ public class Search {
         return Optional.of(i);
       }
     }
-    // If it does not exist in the array then return an index of -1
+    // If it does not exist in the array then return an empty optional 
     return Optional.empty();
   }
 
@@ -34,7 +34,7 @@ public class Search {
    * @post arr[result].funding >= minFunding && for all 0 <= i < result : arr[i].funding < minFunding
    */
   public static Optional<Integer> findTeamMinFunding(final Team[] arr, final int minFunding) {
-    // TODO complete this method
+    // TODO complete this method(next to do)
     return Optional.empty();
   }
   
