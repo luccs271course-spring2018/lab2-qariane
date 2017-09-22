@@ -15,14 +15,14 @@ public class Team {
   public Team(final String name, final String headcoach, final int funding) {
     if (name == null) {
       throw new IllegalArgumentException("name is null");
-    }
+     }
     // TODO validity checking for headcoach(check this later)
-    public Team(final String name, final String headcoach, final int funding) {
+  //public Team(final String name, final String headcoach, final int funding) {
     if (headcoach == null) {
       throw new IllegalArgumentException("headcoach is null");
     }
     // TODO validity checking for funding(check this later)
-    public Team(final String name, final String headcoach, final int funding) {
+  //public Team(final String name, final String headcoach, final int funding) {
     if (funding == null) {
       throw new IllegalArgumentException("funding is null");
     }
@@ -48,6 +48,6 @@ public class Team {
   public int getFunding() {
     // TODO complete this method
    // return -1(in case the at the bottom doesn't work go back to this)
-   return empty optional
+      return this.funding;
   }
 }
