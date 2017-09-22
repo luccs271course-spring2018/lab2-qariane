@@ -60,7 +60,7 @@ public class TestTeam {
   // TODO testGetFunding(not sure  check letter)
    @Test
   public void testGetFunding() {
-   final String Funding = "Klinsmann";
+   final int Funding = "Klinsmann";
    final Team t = makeTeamFixture(name, "Klinsmann", 500);
     assertEquals(Funding, t.getFunding());
   }
