@@ -50,18 +50,18 @@ public class TestTeam {
   
   // TODO testGetHeadcoach
     @Test
-  public void testGetHeadcoach() {
-    final String Headcoach = "Klinsmann";
-    final Team t = makeTeamFixture(name, "Klinsmann", 500);
-    assertEquals(Headcoach, t.getHeadcoach());
+    public void testGetHeadcoach() {
+      final String headcoach = "Klinsmann";
+      final Team t = makeTeamFixture("USA", headcoach, 500);
+      assertEquals(headcoach, t.getHeadcoach());
   }
     
   
   // TODO testGetFunding(not sure  check letter)
    @Test
   public void testGetFunding() {
-   final int Funding = "Klinsmann";
-   final Team t = makeTeamFixture(name, "Klinsmann", 500);
-    assertEquals(Funding, t.getFunding());
+    final int funding = 500;
+    final Team t = makeTeamFixture("USA", "Klinsmann", funding);
+    assertEquals(funding, t.getFunding());
   }
 }

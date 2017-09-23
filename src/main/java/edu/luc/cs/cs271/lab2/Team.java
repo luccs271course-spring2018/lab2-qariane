@@ -16,20 +16,23 @@ public class Team {
     if (name == null) {
       throw new IllegalArgumentException("name is null");
      }
+     this.name = name;
+    
+    
     // TODO validity checking for headcoach(check this later)
   //public Team(final String name, final String headcoach, final int funding) {
     if (headcoach == null) {
       throw new IllegalArgumentException("headcoach is null");
     }
+    this.headcoach = headcoach;
+    
+    
     // TODO validity checking for funding(check this later)
   //public Team(final String name, final String headcoach, final int funding) {
-    if (funding == null) {
-      throw new IllegalArgumentException("funding is null");
+    if (funding <= 0) {
+      throw new IllegalArgumentException("funding cannot be 0");
     }
-    
-    this.name = name;
     // TODO complete this constructor(Done)
-    this.headcoach = headcoach;
     this.funding = funding;
   }
 
@@ -41,7 +44,7 @@ public class Team {
   /** Returns the team's head coach. */
   public String getHeadcoach() {
     // TODO complete this method(chech if it is correct)
-    return this.Headcoach;
+    return this.headcoach;
   }
 
   /** Returns the team's funding level. */
