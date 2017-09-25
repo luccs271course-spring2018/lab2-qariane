@@ -82,8 +82,10 @@ public class Search {
     // Return current item only if it meets the condition!
    if (low <= high && arr[low].getFunding() >= minFunding) {
       return Optional.of(low);
-     }else{
-     
-             return Optional.empty();
+     } else {
+       
+       return Optional.empty();
+       }
+     }
   }
 }
