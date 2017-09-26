@@ -2,6 +2,9 @@ package edu.luc.cs.cs271.lab2;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Optional;
 
 public class TestSearch {
   
@@ -15,6 +18,16 @@ public class TestSearch {
   }
 
   // TODO makeListFixture
+  
+  List<Team> makeListFixture(final int size) {
+    final List<Team> list = new ArrayList<>(size);
+    for (int i = 0; i < size; i++) {
+      final String s = Integer.toString(i);
+      list.add(i, new Team("Team " + s, "Coach " + s, i * 100 + 50));
+    }
+    return list;
+  }
+  
 
   @Test
   public void testFindPositionArray0() {
@@ -65,7 +78,7 @@ public class TestSearch {
     @Test
     public void testFindMinFundingArray10s() {
         final Team[] arr = makeArrayFixture(10);
-        assertEquals(Search.findTeamMinFunding(arr, 600),Optional.of(8));
+        assertEquals(Search.findTeamMinFunding(arr, 600),Optional.of(6));
     }
 
     @Test
@@ -73,11 +86,11 @@ public class TestSearch {
         final Team[] arr = makeArrayFixture(10);
         assertEquals(Search.findTeamMinFunding(arr, 1000), Optional.empty());
 
-}
+       }
 
   // TODO: testFindMinFundingArrayFast for several sizes and scenarios
-}
-@Test
+
+    @Test
     public void testFindMinFundingArrayFast0() {
         final Team[] arr = makeArrayFixture(0);
         assertEquals(Search.findTeamMinFundingFast(arr, 1400), Optional.empty());
@@ -87,15 +100,16 @@ public class TestSearch {
     @Test
     public void testFindMinFundingArrayFast10s() {
         final Team[] arr = makeArrayFixture(10);
-        assertEquals(Search.findTeamMinFundingFast(arr, 400), Optional.of(5));
+        assertEquals(Search.findTeamMinFundingFast(arr, 700),Optional.of(7));
     }
 
     @Test
     public void testFindMinFundingArrayFast10f() {
         final Team[] arr = makeArrayFixture(10);
         assertEquals(Search.findTeamMinFundingFast(arr, 1600), Optional.empty());
-
-       }
-
-    }
-}
+      
+     }
+   }
+   
+   
+  
