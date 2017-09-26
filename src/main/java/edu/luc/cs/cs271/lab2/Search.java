@@ -80,12 +80,15 @@ public class Search {
     // Keep going as long as there is more than one item to be checked
     // Eliminate the wrong half of the array
     // Return current item only if it meets the condition!
-   if (low <= high && arr[low].getFunding() >= minFunding) {
-      return Optional.of(low);
-     } else {
-       
-       return Optional.empty();
-       }
-     }
+   //if (low <= high && arr[low].getFunding() >= minFunding) {
+     if (arr[low].getFunding() >= minFunding)
+              return Optional.of(low);
+          else if (arr[low].getFunding() < minFunding && arr[mid].getFunding() < minFunding)
+              low = mid +1;
+          else 
+          high = mid - 1;
+        }
+      
+        return Optional.empty();
+    }
   }
-}
